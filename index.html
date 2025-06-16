@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List Aplikasi</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <h1> To Do List</h1>
+    <div class="name"> <strong>Name :</strong> Jeybrin Rantung </div>
+    <div class="position"> <strong>Position  :</strong> Frontend Web Developer</div>
+    <div class="time"> <strong>Time :   </strong><span id="date"></span></div>
+
+    <textarea id="taskInput" placeholder="Let's do something"></textarea>
+    <select id="priority">
+      <option value="low">Low Priority</option>
+      <option value="medium">Medium Priority</option>
+      <option value="high">High Priority</option>
+    </select>
+
+    <div class="button-group">
+      <button class="deleteAll" onclick="deleteAllTasks()">Delete All</button>
+      <button class="inputTask" onclick="addTask()">Input Task</button>
+    </div>
+
+    <div id="todoList"></div>
+    <div id="doneList">
+      <h3>Done ✅</h3>
+      <div id="completedList"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
