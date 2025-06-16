@@ -6,8 +6,8 @@ const prioritySelect = document.getElementById("priority");
 document.getElementById("date").textContent = new Date().toLocaleDateString(
   "id-ID",
   {
-      year: "numeric",
-      month: "long",
+    year: "numeric",
+    month: "long",
     weekday: "long",
     day: "numeric",
   }
@@ -16,8 +16,8 @@ document.getElementById("date").textContent = new Date().toLocaleDateString(
 function getFormattedDateTime() {
   const now = new Date();
   return now.toLocaleString("id-ID", {
-      year: "numeric",
-      month: "long",
+    year: "numeric",
+    month: "long",
     weekday: "long",
     day: "numeric",
     hour: "2-digit",
@@ -54,7 +54,7 @@ let taskCount = 0;
 function markDone(item) {
   const text = item.querySelector("span").textContent.replace(/^\d+\.\s/, "");
   const timestamp = item.querySelector(".timestamp").textContent;
-  const priorityClass = Array.from(item.classList).find(cls =>
+  const priorityClass = Array.from(item.classList).find((cls) =>
     cls.startsWith("priority-")
   );
 
@@ -75,7 +75,6 @@ function markDone(item) {
   `;
   completedList.appendChild(doneItem);
 }
-
 
 let doneCount = 0;
 
@@ -104,11 +103,9 @@ function undoTask(item, priorityClass, timestamp) {
   todoList.appendChild(newItem);
 }
 
-
 function deleteAllTasks() {
   todoList.innerHTML = "";
   completedList.innerHTML = "";
   taskCount = 0;
   doneCount = 0;
 }
-
